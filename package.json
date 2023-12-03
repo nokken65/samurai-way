@@ -28,11 +28,14 @@
     "web-vitals": "2.1.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
+    "rs:start": "react-scripts start",
+    "rs:build": "react-scripts build",
+    "rs:test": "react-scripts test",
+    "rs:eject": "react-scripts eject",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "predeploy": "pnpm run build",
     "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
@@ -54,6 +57,7 @@
     ]
   },
   "devDependencies": {
+    "@nokken65/prettier-config": "^1.0.1",
     "@types/node": "16.7.13",
     "@types/react": "17.0.20",
     "@types/react-dom": "17.0.9",
@@ -61,6 +65,8 @@
     "@types/react-router-dom": "5.3.3",
     "@types/react-test-renderer": "17.0.1",
     "@types/redux-form": "8.3.3",
-    "@types/uuid": "8.3.4"
+    "@types/uuid": "8.3.4",
+    "@vitejs/plugin-react": "^4.2.0",
+    "vite": "^5.0.4"
   }
 }
